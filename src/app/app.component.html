@@ -1,20 +1,31 @@
-<div class="container">
-<div class="top-menu">
-  <input type="text">
-</div>
-<div class="row">
-<div class="left-menu col-md-3-pt-5">
-  <ul>
-    <li>
-      <a routerLink="/employee">View employee data</a>
-    </li>
-    <li>
-      <a routerLink="/about">About us</a>
-    </li>
-  </ul>
-</div>
-<div class="right-container col-md-8-pt-5">
-  <router-outlet></router-outlet>
-</div>
-</div>
+<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Company name</a>
+  <app-search></app-search>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/employee">
+
+              View employee data
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about">
+              About us
+            </a>
+          </li>
+
+        </ul>
+
+
+      </div>
+    </nav>
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
 </div>
